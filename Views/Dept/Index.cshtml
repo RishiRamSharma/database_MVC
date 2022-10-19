@@ -1,0 +1,31 @@
+﻿@*@{
+        ViewBag.Title = "IndexAction";
+    }*@
+
+@model IEnumerable<mvc.Models.Department>
+
+<h1 class="text-primary text-center"> List of Departments</h1>
+<div>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Department ID</th>
+                <th>Name</th>
+                <th>HOD</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var teah in Model)
+            {
+                <tr>
+                    <td>@teah.DeptId</td>
+                    <td>@teah.DeptName</td>
+                    <td>@teah.DeptHOD</td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
